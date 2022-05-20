@@ -47,9 +47,28 @@ function inputnext() {
 
   return (
     <div>
-      <div className=" items-center justify-center grid grid-cols-6 gap-5 p-6">
+      <div className=" items-center justify-center grid grid-cols-6  grid-rows-2 gap-5 p-6 gap-y-0">
+        <p
+        className="font-extrabold text-2xl text-cuar"
+        >MACHINE 🤖</p>
+        <p
+        className="font-extrabold text-2xl text-cuar"
+        >MODEL ⚙️</p>
+        <p
+        className="font-extrabold text-2xl text-cuar"
+        >WATER 💧</p>
+        <p
+        className="font-extrabold text-2xl text-cuar"
+        >COFFEE 🫘</p>
+        <p
+        className="font-extrabold text-2xl text-cuar"
+        >GRAMS ⚖️</p>
+        <p
+        className="font-extrabold text-2xl text-cuar"
+        >6TIME ⏱</p>
+
         <input
-          className="rounded-lg p-2 w-full border-2 border-ter bg-sec hover:border-4 hover:border-ter hover:bg-sec hover:text-cuar shadow-ter shadow-md"
+          className="rounded-lg p-2 w-full border-2 border-ter bg-sec hover:border-4 hover:border-ter hover:bg-sec hover:text-cuar shadow-ter shadow-md text-xl"
           id="machine"
           maxLength={50}
           minLength={5}
@@ -60,7 +79,7 @@ function inputnext() {
           onChange={handleChange}
         />
         <input
-          className=" border-2 border-ter rounded-lg p-2 w-full bg-sec hover:border-4 hover:border-ter hover:bg-sec hover:text-cuar shadow-ter shadow-md"
+          className=" border-2 border-ter rounded-lg p-2 w-full bg-sec hover:border-4 hover:border-ter hover:bg-sec hover:text-cuar shadow-ter shadow-md text-xl"
           id="model"
           maxLength={50}
           minLength={5}
@@ -71,7 +90,7 @@ function inputnext() {
           onChange={handleChange}
         />
         <input
-          className=" border-2 border-ter rounded-lg p-2 w-full bg-sec hover:border-4 hover:border-ter hover:bg-sec hover:text-cuar shadow-ter shadow-md"
+          className=" border-2 border-ter rounded-lg p-2 w-full bg-sec hover:border-4 hover:border-ter hover:bg-sec hover:text-cuar shadow-ter shadow-md text-xl"
           id="water_type"
           maxLength={20}
           minLength={3}
@@ -82,7 +101,7 @@ function inputnext() {
           onChange={handleChange}
         />
         <input
-          className=" border-2 border-ter rounded-lg p-2 w-full bg-sec hover:border-4 hover:border-ter hover:bg-sec hover:text-cuar shadow-ter shadow-md"
+          className=" border-2 border-ter rounded-lg p-2 w-full bg-sec hover:border-4 hover:border-ter hover:bg-sec hover:text-cuar shadow-ter shadow-md text-xl"
           id="coffee"
           maxLength={50}
           minLength={5}
@@ -93,7 +112,7 @@ function inputnext() {
           onChange={handleChange}
         />
         <input
-          className=" border-2 border-ter rounded-lg p-2 w-full bg-sec hover:border-4 hover:border-ter hover:bg-sec hover:text-cuar shadow-ter shadow-md"
+          className=" border-2 border-ter rounded-lg p-2 w-full bg-sec hover:border-4 hover:border-ter hover:bg-sec hover:text-cuar shadow-ter shadow-md text-xl"
           id="grams"
           type="number"
           max={999}
@@ -104,7 +123,7 @@ function inputnext() {
           onChange={handleChange}
         />
         <input
-          className=" border-2 border-ter rounded-lg p-2 w-full bg-sec hover:border-4 hover:border-ter hover:bg-sec hover:text-cuar shadow-ter shadow-md"
+          className=" border-2 border-ter rounded-lg p-2 w-full bg-sec hover:border-4 hover:border-ter hover:bg-sec hover:text-cuar shadow-ter shadow-md text-xl"
           id="time"
           type="number"
           max={999}
@@ -116,7 +135,7 @@ function inputnext() {
         />
       </div>
       <button
-      className="flex justify-center items-center border-2 border-ter rounded-lg p-2 w-full bg-sec hover:border-4 hover:border-ter hover:bg-sec hover:text-cuar shadow-ter shadow-md"
+      className="flex font-extrabold justify-center items-center border-2 border-ter rounded-lg p-2 w-full bg-sec hover:border-4 hover:border-ter hover:bg-sec hover:text-cuar shadow-ter shadow-md text-xl"
         onClick={() => postBrew(event)}
       >
         Add it ➕
