@@ -29,6 +29,7 @@ export default function Auth() {
         </p>
         <div>
           <input
+            className=" border-2 border-ter rounded-lg p-2 w-full bg-sec hover:border-4 hover:border-ter hover:bg-sec hover:text-cuar shadow-ter shadow-md text-xl"
             maxLength={50}
             minLength={5}
             type="email"
@@ -38,7 +39,7 @@ export default function Auth() {
           />
         </div>
         <button
-          className="flex font-extrabold justify-center items-center border-2 border-ter rounded-lg p-2 w-full bg-sec hover:border-4 hover:border-ter hover:bg-sec hover:text-cuar shadow-ter shadow-md text-xl"
+          className="flex font-extrabold justify-center items-center border-2 border-ter rounded-lg p-2 w-2/5 bg-sec hover:border-4 hover:border-ter hover:bg-sec hover:text-cuar shadow-ter shadow-md text-xl"
           onClick={(e) => {
             e.preventDefault();
             handleLogin(email);
