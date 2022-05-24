@@ -1,23 +1,9 @@
 import Inputnext from "../components/Inputnext";
 import Tablenext from "../components/Tablenext";
 import { supabase } from "../utils/supabase";
-import Auth from "../components/Auth";
-import { useState, useEffect } from "react";
 
 function Home({ brews }) {
-  const [session, setSession] = useState(null);
 
-  useEffect(() => {
-    setSession(supabase.auth.session());
-
-    supabase.auth.onAuthStateChange((_event, session) => {
-      setSession(session);
-    });
-  }, []);
-
-  if (!session) {
-    return <Auth />;
-  }
 
   return (
     <div className="flex items-center justify-center h-screen bg-pri font-mono">
@@ -32,7 +18,7 @@ function Home({ brews }) {
         </h2>
         <Inputnext />
       </div>
-      <footer class="bg-pri text-cuar w-full bottom-0 flex absolute  items-center justify-center text-2xl border-t-4 border-t-ter m-4 p-4">
+      <footer className="bg-pri text-cuar w-full bottom-0 flex absolute  items-center justify-center text-2xl border-t-4 border-t-ter m-4 p-4">
           Powered with ❤️ by Th3st1gh
       </footer>
     </div>

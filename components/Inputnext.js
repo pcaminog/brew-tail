@@ -1,8 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from 'react'
 import { supabase } from "../utils/supabase";
 import { useRouter } from "next/router";
 
 function inputnext() {
+
+  const [session, setSession] = useState(null)
+
+  useEffect(() => {
+    setSession(supabase.auth.session())
+
+    supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session)
+    })
+  }, [])
+
   const [brew, setBrew] = useState({
     machine: "",
     water_type: "",
@@ -44,6 +55,17 @@ function inputnext() {
     });
     refreshData();
   };
+
+  if (!session) {
+    
+    return (
+        <button type="button" 
+        className="flex font-extrabold justify-center items-center border-2 border-ter rounded-lg p-2 w-full bg-sec hover:border-4 hover:border-ter hover:bg-sec hover:text-cuar shadow-ter shadow-md text-xl"
+        onClick={() => router.push('/auth')}>
+          Sign Up!
+        </button>
+    )
+  }
 
   return (
     <div>

@@ -22,8 +22,11 @@ export default function Auth() {
     <div className="flex items-center justify-center h-screen bg-pri font-mono">
       <div className="grid place-items-center w-3/4 gap-10 m-5">
         <h1 className=" font-extrabold text-8xl text-cuar">
-          Brew It ☕️ Login
+          Brew It ☕️
         </h1>
+        <h2
+        className="font-extrabold text-4xl text-cuar"
+        >Login</h2>
         <p className="font-extrabold text-2xl text-s text-cuar">
           Sign in via magic link with your email below
         </p>
