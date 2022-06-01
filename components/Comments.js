@@ -34,7 +34,7 @@ const Comments = ({ data }) => {
     supabase
       .from("comments")
       .insert(text)
-      .eq("parent_id", parentId)
+      .eq("parentId", parentId)
       .then((comment) => {
         setBackendComments([comment, ...backendComments]);
         setActiveComment(null);
