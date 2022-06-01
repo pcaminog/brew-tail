@@ -1,6 +1,7 @@
 
 import React from 'react'
 import { useTable, useSortBy } from 'react-table'
+import { useRouter } from "next/router";
 
 
 
@@ -13,6 +14,9 @@ function Table({ columns, data }) {
   },
   useSortBy
   )
+
+    const router = useRouter();
+
 
   // Render the UI for your table
   return (
@@ -45,7 +49,12 @@ function Table({ columns, data }) {
           return (
             <tr 
             className='hover:bg-quin hover:border hover:border-quin'
-            {...row.getRowProps()}>
+            {...row.getRowProps({
+              onClick: () => { router.push({ 
+              pathname: '/[row]',
+              query: { row: row.original.id }
+              })
+            }}, ) }>
               {row.cells.map(cell => {
                 return (
                   <th
