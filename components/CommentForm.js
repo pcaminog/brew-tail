@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { supabase } from "../utils/supabase";
+import { useRouter } from "next/router";
 
 const CommentForm = ({ handleSubmit, submitLabel, initialText = "" }) => {
   const [text, setText] = useState(initialText);
@@ -11,6 +12,9 @@ const CommentForm = ({ handleSubmit, submitLabel, initialText = "" }) => {
   };
 
   const [session, setSession] = useState(null);
+
+  const router = useRouter();
+
 
   useEffect(() => {
     setSession(supabase.auth.session());
